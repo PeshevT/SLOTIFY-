@@ -1,0 +1,50 @@
+{
+  "users": [],
+  "professionals": [
+    {
+      "id": "p1",
+      "name": "Dr. Sarah Lane",
+      "serviceId": "s1",
+      "bio": "Certified dermatologist with 10 years of experience.",
+      "availableSlots": ["09:00", "10:00", "11:00", "14:00", "15:00"]
+    },
+    {
+      "id": "p2",
+      "name": "Mark Turner",
+      "serviceId": "s2",
+      "bio": "Expert barber specializing in modern cuts.",
+      "availableSlots": ["09:30", "11:00", "13:00", "16:00"]
+    },
+    {
+      "id": "p3",
+      "name": "Lisa Chen",
+      "serviceId": "s3",
+      "bio": "Licensed massage therapist focused on deep tissue.",
+      "availableSlots": ["10:00", "12:00", "14:00", "16:00"]
+    }
+  ],
+  "services": [
+    {
+      "id": "s1",
+      "name": "Dermatology Consultation",
+      "description": "Skin check and treatment planning.",
+      "duration": 60,
+      "price": 80
+    },
+    {
+      "id": "s2",
+      "name": "Haircut & Styling",
+      "description": "Professional cut and styling for all hair types.",
+      "duration": 45,
+      "price": 35
+    },
+    {
+      "id": "s3",
+      "name": "Massage Therapy",
+      "description": "Relaxing full-body massage session.",
+      "duration": 90,
+      "price": 70
+    }
+  ],
+  "appointments": []
+}
