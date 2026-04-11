@@ -6,6 +6,7 @@ import { registerUser } from '../services/authService'
 function Register() {
   const navigate = useNavigate()
 
+  //State:  From line 10 up to line 18, stores what user types
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,10 +17,12 @@ function Register() {
   const [errors, setErrors] = useState({})
   const [serverError, setServerError] = useState(null)
 
+  // Updates state of every keystroke
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
+  // Runs validators before submiting 
   function validate() {
     const newErrors = {}
     const nameError = validateName(formData.name)
@@ -35,6 +38,7 @@ function Register() {
     return newErrors
   }
 
+  // Prevent default from reload, runs validation, calls registerUser, redirects to /login on success
   async function handleSubmit(e) {
     e.preventDefault()
     setServerError(null)

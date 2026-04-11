@@ -1,3 +1,4 @@
+// Database Layer
 const API_URL = 'http://localhost:3001'
 
 export async function registerUser(name, email, password) {
@@ -31,12 +32,15 @@ export async function registerUser(name, email, password) {
 }
 
 export async function loginUser(email, password) {
-  const response = await fetch(`${API_URL}/users?email=${email}&password=${password}`)
+  const response = await fetch(`${API_URL}/users`)
   const users = await response.json()
 
-  if (users.length === 0) {
+  const user = users.find(u=>u.email === email && u.password === password)
+
+
+  if (!user) {
     throw new Error('Invalid email or password')
   }
 
-  return users[0]
+  return user
 }

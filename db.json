@@ -1,26 +1,50 @@
 {
-  "users": [],
+  "users": [
+    {
+      "name": "Tsvetan Peshev",
+      "email": "tsvetanpeshev@abv.bg",
+      "password": "123456",
+      "role": "client",
+      "id": "01ABGgFXY4w"
+    }
+  ],
   "professionals": [
     {
       "id": "p1",
       "name": "Dr. Sarah Lane",
       "serviceId": "s1",
       "bio": "Certified dermatologist with 10 years of experience.",
-      "availableSlots": ["09:00", "10:00", "11:00", "14:00", "15:00"]
+      "availableSlots": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "14:00",
+        "15:00"
+      ]
     },
     {
       "id": "p2",
       "name": "Mark Turner",
       "serviceId": "s2",
       "bio": "Expert barber specializing in modern cuts.",
-      "availableSlots": ["09:30", "11:00", "13:00", "16:00"]
+      "availableSlots": [
+        "09:30",
+        "11:00",
+        "13:00",
+        "16:00"
+      ]
     },
     {
       "id": "p3",
       "name": "Lisa Chen",
       "serviceId": "s3",
       "bio": "Licensed massage therapist focused on deep tissue.",
-      "availableSlots": ["10:00", "12:00", "14:00", "16:00"]
+      "availableSlots": [
+        "10:00",
+        "12:00",
+        "14:00",
+        "16:00"
+      ]
     }
   ],
   "services": [
@@ -46,5 +70,6 @@
       "price": 70
     }
   ],
-  "appointments": []
+  "appointments": [],
+  "$schema": "./node_modules/json-server/schema.json"
 }
