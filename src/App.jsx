@@ -5,6 +5,7 @@ import Register from './pages/Register'
 import Dashboard from "./pages/Dashboard"
 import ProtectedRoute from './components/ProtectedRoute'
 import Navbar from './components/Navbar'
+import ServiceDetail from './pages/ServiceDetail'
 
 //Wrap it with the  content provider
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Dashboard/>
         </ProtectedRoute>
       }/>
+      <Route path="/services/:id" element={<ServiceDetail />} />
     </Routes>
     </BrowserRouter>
   )
