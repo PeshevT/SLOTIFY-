@@ -5,7 +5,7 @@ import { useAuth } from '../authContext'
 function BookingPage (){
     const { professionalId } = useParams()
     const navigate = useNavigate()
-    const user = useAuth()
+    const { user } = useAuth()
     const [professional, setProfessional] = useState(null)
     const [selectedSlot, setSelectedSlot] = useState("")
     const [selectedDate, setSelectedDate] = useState("")

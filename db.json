@@ -72,12 +72,13 @@
   ],
   "appointments": [
     {
+      "userId": "01ABGgFXY4w",
       "professionalId": "p2",
       "serviceId": "s2",
       "date": "2026-05-04",
       "slot": "13:00",
       "status": "confirmed",
-      "id": "S5D0vx_HgQA"
+      "id": "aMG1ph1mUrs"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
