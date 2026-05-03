@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard"
 import ProtectedRoute from './components/ProtectedRoute'
 import Navbar from './components/Navbar'
 import ServiceDetail from './pages/ServiceDetail'
+import BookingPage from './pages/BookingPage'
 
 //Wrap it with the  content provider
 function App() {
@@ -23,6 +24,11 @@ function App() {
         </ProtectedRoute>
       }/>
       <Route path="/services/:id" element={<ServiceDetail />} />
+      <Route path="/book/:professionalId" element={
+        <ProtectedRoute>
+          <BookingPage />
+        </ProtectedRoute>
+      } />
     </Routes>
     </BrowserRouter>
   )
