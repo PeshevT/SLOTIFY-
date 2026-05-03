@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import { validateEmail, validatePassword } from '../utils/validators'
 import { loginUser } from '../services/authService'
 import { useAuth } from '../authContext'
+import './Login.css'
 
 function Login() {
     const navigate = useNavigate()
@@ -52,11 +53,11 @@ function Login() {
     }
 
     return (
-    <div>
+    <div className='login-container'>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
 
-        <div>
+        <div className="from-group">
           <label>Email</label>
           <input
             type="email"
@@ -66,7 +67,7 @@ function Login() {
           />
           {errors.email && <p>{errors.email}</p>}
         </div>
-        <div>
+        <div className="from-group">
           <label>Password</label>
           <input
             type="password"

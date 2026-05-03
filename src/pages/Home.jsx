@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import './Home.css'
 
 function Home() {
 const [services, setServices] = useState([])
@@ -12,13 +13,13 @@ useEffect(() => {
 }, [])
 
   return (
-    <div>
+    <div className="home-container" >
       <h1>Welcome to Slotify</h1>
       <p>Book appointments with professionals easily.</p>
-      <h2>Our Services</h2>   
-      <div>
+      <h2>Our Services</h2>  
+      <div className="services-grid">
         {services.map(service => (
-          <div key={service.id}>
+          <div key={service.id}  className="service-card">
             <h3>{service.name}</h3>
             <p>{service.description}</p>
             <p>Duration: {service.duration} min</p>
