@@ -51,3 +51,27 @@ a:hover {
   text-decoration: underline;
 }
 
+.from-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.from-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 13px;
+}
+
+.server-error {
+  color: #e74c3c;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 12px;
+}

@@ -1,32 +1,26 @@
-.login-container {
+.register-container {
     max-width: 420px;
-    margin: 80px auto;
+    margin: 60px auto;
     background: white;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.login-container h1 {
+.register-container h1{
     text-align: center;
     margin-bottom: 24px;
 }
 
-.from-group label {
-    font-size: 14px;
-    font-weight: 600;
-    color: #555;
-}
-
-.login-container button {
+.register-container button {
     width: 100%;
     padding: 12px;
     font-size: 16px;
     margin-top: 8px;
 }
 
-.login-container p {
-    text-align:  center;
+.register-container p {
+    text-align: center;
     margin-top: 16px;
     font-size: 14px;
     color: #666;

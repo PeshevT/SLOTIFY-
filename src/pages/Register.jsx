@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { validateName, validateEmail, validatePassword, validateConfirmPassword } from '../utils/validators'
 import { registerUser } from '../services/authService'
+import './Register.css'
 
 function Register() {
   const navigate = useNavigate()
@@ -58,11 +59,11 @@ function Register() {
   }
 
   return (
-    <div>
+    <div className='register-container'>
       <h1>Register</h1>
       <form onSubmit={handleSubmit}>
 
-        <div>
+        <div className='form-group'>
           <label>Name</label>
           <input
             type="text"
@@ -70,10 +71,10 @@ function Register() {
             value={formData.name}
             onChange={handleChange}
           />
-          {errors.name && <p>{errors.name}</p>}
+          {errors.name && <p className='error'>{errors.name}</p>}
         </div>
 
-        <div>
+        <div className='form-group'>
           <label>Email</label>
           <input
             type="email"
@@ -81,10 +82,10 @@ function Register() {
             value={formData.email}
             onChange={handleChange}
           />
-          {errors.email && <p>{errors.email}</p>}
+          {errors.email && <p className='error'>{errors.email}</p>}
         </div>
 
-        <div>
+        <div className='form-group'>
           <label>Password</label>
           <input
             type="password"
@@ -92,10 +93,10 @@ function Register() {
             value={formData.password}
             onChange={handleChange}
           />
-          {errors.password && <p>{errors.password}</p>}
+          {errors.password && <p className='error'>{errors.password}</p>}
         </div>
 
-        <div>
+        <div className='form-group'>
           <label>Confirm Password</label>
           <input
             type="password"
@@ -103,10 +104,10 @@ function Register() {
             value={formData.confirmPassword}
             onChange={handleChange}
           />
-          {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
+          {errors.confirmPassword && <p className='error'>{errors.confirmPassword}</p>}
         </div>
 
-        {serverError && <p>{serverError}</p>}
+        {serverError && <p className='error'>{serverError}</p>}
 
         <button type="submit">Register</button>
       </form>
