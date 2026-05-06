@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import'./ServiceDetail.css'
 
 function ServiceDetail () {
     const { id } = useParams()
@@ -23,21 +24,25 @@ function ServiceDetail () {
         if (!service) return <p>Loading...</p>
 
         return (
-            <div>
+            <div className='service-detail-container'>
                 <h1>{service.name}</h1>
                 <p>{service.description}</p>
-                <p>Duration: {service.duration} min</p>
-                <p>Price: ${service.price}</p>
+                <div className="service-info">
+                  <span>{service.duration} min</span>
+                  <span>${service.price}</span>
+                </div>
 
                 <h2>Available Professionals</h2>
                 {professionals.map(professional => (
-                    <div key={professional.id}>
-                        <h3>{professional.name}</h3>
-                        <p>{professional.bio}</p>
-                        <button onClick={() => navigate(`/book/${professional.id}`)}>
-                            Book with {professional.name}
-                        </button>
-                    </div>
+                   <div key={professional.id} className="professional-card">
+                     <div>
+                       <h3>{professional.name}</h3>
+                       <p>{professional.bio}</p>
+                     </div>
+                     <button onClick={() => navigate(`/book/${professional.id}`)}>
+                        Book with {professional.name}
+                     </button>
+                   </div>
                 ))}
             </div>
         )

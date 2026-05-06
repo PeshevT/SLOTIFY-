@@ -79,6 +79,24 @@
       "slot": "13:00",
       "status": "confirmed",
       "id": "aMG1ph1mUrs"
+    },
+    {
+      "userId": "01ABGgFXY4w",
+      "professionalId": "p1",
+      "serviceId": "s1",
+      "date": "2026-05-14",
+      "slot": "11:00",
+      "status": "confirmed",
+      "id": "syKjn6h9q8c"
+    },
+    {
+      "userId": "01ABGgFXY4w",
+      "professionalId": "p3",
+      "serviceId": "s3",
+      "date": "2026-05-29",
+      "slot": "10:00",
+      "status": "confirmed",
+      "id": "kV2Gdg6J6uA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

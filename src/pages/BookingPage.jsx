@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import { useParams, useNavigate} from 'react-router-dom'
 import { useAuth } from '../authContext'
+import './BookingPage.css'
 
 function BookingPage (){
     const { professionalId } = useParams()
@@ -45,7 +46,7 @@ function BookingPage (){
     if (!professional) return <p>Loading...</p>
 
     return (
-        <div>
+        <div className='booking-container'>
             <h1>Book with {professional.name}</h1>
             <p>{professional.bio}</p>
 
@@ -57,19 +58,21 @@ function BookingPage (){
             />  
 
             <h2>Select a Time Slot</h2>
-            {professional.availableSlots.map(slot => (
-                <button
-                  key={slot}
-                  onClick={() => setSelectedSlot(slot)}
-                  style={{fontWeight: selectedSlot === slot ? 'bold' : "normal"}}
-                >
+            <div className="slots-grid">
+               {professional.availableSlots.map(slot => (
+                  <button
+                    key={slot}
+                    onClick={() => setSelectedSlot(slot)}
+                    className={selectedSlot === slot ? 'slot-button selected' : 'slot-button'}
+                  >
                     {slot}
-                </button>  
-            ))}
+                  </button>
+                ))}
+            </div>
 
-            {message && <p>{message}</p>}
+            {message && <p className="booking-message">{message}</p>}
 
-            <button onClick={handleBooking}>Confirm Booking</button>
+            <button className="confirm-button" onClick={handleBooking}>Confirm Booking</button>
         </div>
     )
 }

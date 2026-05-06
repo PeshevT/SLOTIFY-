@@ -1,0 +1,57 @@
+.service-detail-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.service-detail-container h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.service-detail-container > p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.service-info {
+    display: flex;
+    gap: 24px;
+    margin: 16px 0 32px;
+}
+
+.service-info span {
+    background: #eaf4fb;
+    color: #2980b9;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.professionals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.professional-card {
+    background: white;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.professional-card h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.professional-card p {
+    color: #666;
+    font-size: 14px;
+}

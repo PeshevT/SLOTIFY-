@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react'
-import { useNavigate } from "react-router-dom"
 import { useAuth } from '../authContext'
+import  './Dashboard.css'
 
 function Dashboard() {
-    const {user, logout } = useAuth()
-    const navigate = useNavigate()
+    const {user} = useAuth()
     const [appointments, setAppointments] = useState([])
 
     useEffect(() => {
@@ -16,29 +15,22 @@ function Dashboard() {
           })
     }, [user.id])
 
-    function handleLogout(){
-        logout()
-        navigate('/login')
-    }
-
     return (
-        <div>
+        <div className='dashboard-container'>
             <h1>Welcome, {user?.name}</h1>
 
             <h2>Your Appointments</h2>
             {appointments.length === 0 ? (
-                 <p>You have no appointmens yet.</p>
+                 <p className='no-appointments'>You have no appointmens yet.</p>
             ) : (
                 appointments.map(appointment => (
-                  <div key={appointment.id}>
+                  <div key={appointment.id} className='appointment-card'>
                     <p>Date: {appointment.date}</p>
                     <p>Time: {appointment.slot}</p>
-                    <p>Status: {appointment.status}</p>
+                    <p className='appointment-status'>Status: {appointment.status}</p>
                   </div>  
                 ))
             )}
-           
-            <button onClick={handleLogout}>Logout</button>
         </div>
 
     )
